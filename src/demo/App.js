@@ -19,7 +19,8 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="weather-card">
+                <h1>Hello world</h1>
                 <weathercard
                     setProps={this.setProps}
                     {...this.state}

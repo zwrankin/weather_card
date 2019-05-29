@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import './weathercard.css';
 
 /**
  * ExampleComponent is an example component.
@@ -13,7 +14,7 @@ export default class weathercard extends Component {
         const {id, label, city, setProps, value} = this.props;
 
         return (
-            <div id={id}>
+            <div id={id} className="weather-card">
                 <h1>{city}</h1>
                 ExampleComponent: {label}&nbsp;
                 <input
