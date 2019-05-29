@@ -1,0 +1,5 @@
+include weather_card/weather_card.min.js
+include weather_card/weather_card.dev.js
+include weather_card/metadata.json
+include weather_card/package.json
+include README.md
