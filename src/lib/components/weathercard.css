@@ -1,8 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
 .weather-card {
     /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/44/Flickr.svg');*/
-    background-repeat: no-repeat;
-    margin:  20px 5px;
+    /*background-repeat: no-repeat;*/
+    font-family: 'Lato', sans-serif;
+    color: #B8B8B8;
+    font-weight:300;
+    /*margin:  20px 5px;*/
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -11,16 +15,59 @@
     box-shadow: 0px 0px 25px 1px rgba(50, 50, 50, 0.1);
 }
 
-.weather-card h1 {
-    font-size: 80px;
+.weather-card .weather-icon {
+   position: absolute;
+   top: 0;
+   right: 0;
 }
 
-.wind-arrow {
+/*temperature */
+.weather-card h1 {
+    position: absolute;
+    font-size:80px;
+    bottom: 110px;
+    left: 15px;
+}
+
+/*conditions*/
+.weather-card p {
+    position: absolute;
+    font-size:14px;
+    bottom: 120px;
+    left: 35px;
+}
+
+.weather-card .wind-arrow {
+    position: absolute;
+    bottom: 70px;
+    left: 85px;
+    opacity: 0.50;
     animation: wind-arrow-move 800ms ease-in-out infinite alternate, wind-arrow-move 5s ease-in-out infinite;
 }
 
+/*windspeed*/
+.weather-card h4 {
+    position: absolute;
+    font-size:16px;
+    bottom: 60px;
+    left: 35px;
+    font-weight:200;
+}
+
+/*city*/
+.weather-card h3 {
+    position: absolute;
+    font-size:36px;
+    bottom: -20px;
+    left: 35px;
+    font-weight:200;
+}
+
+
+
+
 @keyframes wind-arrow-move {
     50% {
-        transform: translateX(-8px);
+        transform: translateX(8px);
     }
 }

@@ -9,9 +9,53 @@
           "name": "string"
         },
         "required": false,
-        "description": "City",
+        "description": "",
         "defaultValue": {
           "value": "\"Chicago\"",
+          "computed": false
+        }
+      },
+      "conditions": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"Sunny and warm, baby!\"",
+          "computed": false
+        }
+      },
+      "iconUrl": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "'http://openweathermap.org/img/w/10d.png'",
+          "computed": false
+        }
+      },
+      "temperature": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"80\"",
+          "computed": false
+        }
+      },
+      "windSpeed": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"8mph\"",
           "computed": false
         }
       },

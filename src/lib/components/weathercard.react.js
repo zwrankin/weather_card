@@ -12,12 +12,16 @@ import './weathercard.css';
 export default class weathercard extends Component {
 
     render() {
-        const {id, label, city, setProps, value} = this.props;
+        const {id, label, city, temperature, windSpeed, conditions, iconUrl, setProps, value} = this.props;
 
         return (
             <div id={id} className="weather-card">
-                <img src='http://openweathermap.org/img/w/10d.png' className="wind-arrow"/>
-                <h1>{city}</h1>
+                <img src={iconUrl} className="weather-icon" height="60"/>
+                <h1>{temperature}</h1>
+                <img src="https://static.thenounproject.com/png/493928-200.png" className="wind-arrow" height="40"/>
+                // <h4>{windSpeed}</h4>
+                <p>{conditions}</p>
+                <h3>{city}</h3>
                 ExampleComponent: {label}&nbsp;
                 <input
                     value={value}
@@ -40,14 +44,20 @@ export default class weathercard extends Component {
 }
 
 weathercard.defaultProps = {
-    city: "Chicago"
+    city: "Chicago",
+    temperature: "80",
+    windSpeed: "8mph",
+    conditions: "Sunny and warm, baby!",
+    iconUrl: 'http://openweathermap.org/img/w/10d.png'
 };
 
 weathercard.propTypes = {
-    /**
-     * City
-     */
     city: PropTypes.string,
+    conditions: PropTypes.string,
+    iconUrl: PropTypes.string,
+    temperature: PropTypes.string,
+    windSpeed: PropTypes.string,
+
     /**
      * The ID used to identify this component in Dash callbacks
      */
