@@ -12,7 +12,8 @@ app.layout = html.Div([
     weather_card.weathercard(
         id='input',
         value='my-value',
-        label='my-label'
+        label='my-label',
+        city='Chicago'
     ),
     html.Div(id='output')
 ])

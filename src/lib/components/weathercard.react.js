@@ -10,6 +10,7 @@ import './weathercard.css';
  * which is editable by the user.
  */
 export default class weathercard extends Component {
+
     render() {
         const {id, label, city, setProps, value} = this.props;
 
