@@ -12,38 +12,24 @@ import './weathercard.css';
 export default class weathercard extends Component {
 
     render() {
-        const {id, label, city, temperature, windSpeed, conditions, iconUrl, setProps, value} = this.props;
+        const {id, label, forecastTime, city, temperature, windSpeed, conditions, iconUrl, setProps, value} = this.props;
 
         return (
             <div id={id} className="weather-card">
+                <h6>Forecast for {forecastTime} </h6>
                 <img src={iconUrl} className="weather-icon" height="60"/>
                 <h1>{temperature}</h1>
                 <img src="https://static.thenounproject.com/png/493928-200.png" className="wind-arrow" height="40"/>
-                // <h4>{windSpeed}</h4>
+                <h4>{windSpeed}</h4>
                 <p>{conditions}</p>
                 <h3>{city}</h3>
-                ExampleComponent: {label}&nbsp;
-                <input
-                    value={value}
-                    onChange={
-                        /*
-                         * Send the new value to the parent component.
-                         * setProps is a prop that is automatically supplied
-                         * by dash's front-end ("dash-renderer").
-                         * In a Dash app, this will update the component's
-                         * props and send the data back to the Python Dash
-                         * app server if a callback uses the modified prop as
-                         * Input or State.
-                         */
-                        e => setProps({ value: e.target.value })
-                    }
-                />
             </div>
         );
     }
 }
 
 weathercard.defaultProps = {
+    forecastTime: "April 8 at 6pm",
     city: "Chicago",
     temperature: "80",
     windSpeed: "8mph",
@@ -52,6 +38,7 @@ weathercard.defaultProps = {
 };
 
 weathercard.propTypes = {
+    forecastTime: PropTypes.string,
     city: PropTypes.string,
     conditions: PropTypes.string,
     iconUrl: PropTypes.string,

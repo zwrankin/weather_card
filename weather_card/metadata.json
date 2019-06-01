@@ -4,6 +4,17 @@
     "displayName": "weathercard",
     "methods": [],
     "props": {
+      "forecastTime": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "\"April 8 at 6pm\"",
+          "computed": false
+        }
+      },
       "city": {
         "type": {
           "name": "string"

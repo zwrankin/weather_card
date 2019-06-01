@@ -12,6 +12,7 @@ It renders an input with the property `value`
 which is editable by the user.
 
 Keyword arguments:
+- forecastTime (string; optional)
 - city (string; optional)
 - conditions (string; optional)
 - iconUrl (string; optional)
@@ -21,12 +22,12 @@ Keyword arguments:
 - label (string; required): A label that will be printed when this component is rendered.
 - value (string; optional): The value displayed in the input"""
     @_explicitize_args
-    def __init__(self, city=Component.UNDEFINED, conditions=Component.UNDEFINED, iconUrl=Component.UNDEFINED, temperature=Component.UNDEFINED, windSpeed=Component.UNDEFINED, id=Component.UNDEFINED, label=Component.REQUIRED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['city', 'conditions', 'iconUrl', 'temperature', 'windSpeed', 'id', 'label', 'value']
+    def __init__(self, forecastTime=Component.UNDEFINED, city=Component.UNDEFINED, conditions=Component.UNDEFINED, iconUrl=Component.UNDEFINED, temperature=Component.UNDEFINED, windSpeed=Component.UNDEFINED, id=Component.UNDEFINED, label=Component.REQUIRED, value=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['forecastTime', 'city', 'conditions', 'iconUrl', 'temperature', 'windSpeed', 'id', 'label', 'value']
         self._type = 'weathercard'
         self._namespace = 'weather_card'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['city', 'conditions', 'iconUrl', 'temperature', 'windSpeed', 'id', 'label', 'value']
+        self.available_properties = ['forecastTime', 'city', 'conditions', 'iconUrl', 'temperature', 'windSpeed', 'id', 'label', 'value']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

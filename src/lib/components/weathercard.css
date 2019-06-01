@@ -21,6 +21,15 @@
    right: 0;
 }
 
+/*forecastTime*/
+.weather-card h6 {
+    position: absolute;
+    font-size:12px;
+    top: -20px;
+    left: 35px;
+    opacity: 0.50;
+}
+
 /*temperature */
 .weather-card h1 {
     position: absolute;
