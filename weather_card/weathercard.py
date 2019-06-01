@@ -12,7 +12,7 @@ It renders an input with the property `value`
 which is editable by the user.
 
 Keyword arguments:
-- city (string; optional)
+- city (string; optional): City
 - id (string; optional): The ID used to identify this component in Dash callbacks
 - label (string; required): A label that will be printed when this component is rendered.
 - value (string; optional): The value displayed in the input"""

@@ -9,7 +9,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "",
+        "description": "City",
         "defaultValue": {
           "value": "\"Chicago\"",
           "computed": false

@@ -16,6 +16,7 @@ export default class weathercard extends Component {
 
         return (
             <div id={id} className="weather-card">
+                <img src='http://openweathermap.org/img/w/10d.png' className="wind-arrow"/>
                 <h1>{city}</h1>
                 ExampleComponent: {label}&nbsp;
                 <input
@@ -43,6 +44,9 @@ weathercard.defaultProps = {
 };
 
 weathercard.propTypes = {
+    /**
+     * City
+     */
     city: PropTypes.string,
     /**
      * The ID used to identify this component in Dash callbacks
